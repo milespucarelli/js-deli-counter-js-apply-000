@@ -1,15 +1,18 @@
-function takeANumber(line, name) {
-  line.push(name);
-  return `Welcome, ${name}. You are number ${line.length} in line.`;
+var ticketNumber = 1
+
+function takeANumber(line) {
+  line.push(ticketNumber);
+  ticketNumber++;
+  return `Welcome, ${ticketNumber}. You are number ${line.length} in line.`;
 }
 
 function nowServing(line) {
-  var name = "";
+  var number = 0;
   if(line.length === 0) {
     return "There is nobody waiting to be served!";
   } else {
-    name = line.shift();
-    return `Currently serving ${name}.`;
+    number = line.shift();
+    return `Currently serving ${number}.`;
   }
 }
 
