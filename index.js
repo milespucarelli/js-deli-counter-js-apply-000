@@ -2,8 +2,7 @@ var ticketNumber = 1
 
 function takeANumber(line) {
   line.push(ticketNumber);
-  ticketNumber++;
-  return `Welcome, ${ticketNumber}. You are number ${line.length} in line.`;
+  return `Welcome, ${ticketNumber++}. You are number ${line.length} in line.`;
 }
 
 function nowServing(line) {
